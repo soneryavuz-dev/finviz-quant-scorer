@@ -78,4 +78,3 @@ A deeper look into the individual scores and other technical metrics, including 
 ## 👤 Author
 Developed with 💡 by **Soner Yavuz**
 * **GitHub:** [@soneryavuz-dev](https://github.com/soneryavuz-dev)
-```
