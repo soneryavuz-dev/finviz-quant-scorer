@@ -1,19 +1,38 @@
 # 🚀 Finviz & Yahoo Finance Quant Scorer
 
-An automated stock analysis tool that combines **Finviz** web scraping with **Yahoo Finance** fundamental data to rank stocks using a proprietary quantitative methodology.
+[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Author](https://img.shields.io/badge/Developer-Soner%20Yavuz-green)](https://github.com/soneryavuz-dev)
+
+An automated high-performance stock analysis tool that scrapes **Finviz** and **Yahoo Finance** data to perform automated multi-factor quant scoring (Profitability, Debt, Value) for global stock analysis.
+
+---
+
+## 📈 Overview
+
+This project is designed for value investors and quantitative analysts. It automates the tedious process of gathering fundamental data and provides a sector-relative scoring system to identify undervalued "gems."
+
+### 🧠 Methodology
+The tool applies a **Percentile Ranking** approach within each sector:
+- **Profitability (45%)**: ROIC, Operating Margin, Gross Margin, EPS Growth, ROE.
+- **Financial Health (15%)**: Debt/Equity, LT Debt/Equity, Current Ratio.
+- **Value (40%)**: P/FCF, EV/EBIT (Calculated via TTM), PEG, P/E, P/S.
+
+---
 
 ## ✨ Key Features
-- **Multi-Source Data:** Scrapes Overview, Valuation, Financial, and Technical tabs from Finviz.
-- **Advanced Metrics:** Fetches TTM EBIT and real-time Balance Sheet data via Yahoo Finance.
-- **Smart Scoring:** Scores stocks within their **Sectors** based on:
-  - **Profitability (45%):** ROIC, Oper. Margin, ROE, etc.
-  - **Valuation (40%):** P/FCF, EV/EBIT, PEG, P/E.
-  - **Financial Health (15%):** Debt/Equity, Current Ratio.
-- **Automated Reporting:** Generates a formatted professional Excel report (`Stock_Analysis_Report.xlsx`).
-- **Caching System:** Saves time and prevents API rate limits by caching data locally.
 
-## 🛠️ Installation
+* **Full Data Integration:** Merges Finviz screener data with Yahoo Finance real-time TTM (Trailing Twelve Months) metrics.
+* **EV/EBIT Calculation:** Automatically calculates Enterprise Value and TTM EBIT for more accurate valuation than simple P/E.
+* **Smart Caching:** Avoids rate limits and saves time by storing data in local `.csv` caches (valid for 4 hours).
+* **Professional Reporting:** Generates a formatted `.xlsx` report with conditional column widths and headers.
+* **Multi-threaded Scraping:** Uses `ThreadPoolExecutor` for high-speed data retrieval.
 
-1. Clone the repository:
+---
+
+## 🛠️ Installation & Usage
+
+1. **Clone the repo:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/finviz-quant-scorer.git](https://github.com/YOUR_USERNAME/finviz-quant-scorer.git)
+   git clone [https://github.com/soneryavuz-dev/finviz-quant-scorer.git](https://github.com/soneryavuz-dev/finviz-quant-scorer.git)
+   cd finviz-quant-scorer
