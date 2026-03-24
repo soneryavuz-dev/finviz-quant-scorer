@@ -34,5 +34,16 @@ The tool applies a **Percentile Ranking** approach within each sector:
 
 1. **Clone the repo:**
    ```bash
-   git clone [https://github.com/soneryavuz-dev/finviz-quant-scorer.git](https://github.com/soneryavuz-dev/finviz-quant-scorer.git)
+   git clone https://github.com/soneryavuz-dev/finviz-quant-scorer.git
    cd finviz-quant-scorer
+   ```
+
+2. **Install requirements:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the analyzer:**
+   ```bash
+   python main.py
+   ```
